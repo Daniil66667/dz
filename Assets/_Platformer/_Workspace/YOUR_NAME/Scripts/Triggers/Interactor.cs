@@ -32,7 +32,7 @@ public class Interactor : MonoBehaviour
    }
    public bool HasInteractions()
    {
-     return_interactiveObjects.Count(x=>x.CanInteractWith(this))>0;
+     return _interactiveObjects.Count(x=>x.CanInteractWith(this))>0;
    }
 }
 
