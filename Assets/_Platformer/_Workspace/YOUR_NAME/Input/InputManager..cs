@@ -7,17 +7,18 @@ public class InputManager : MonoBehaviour
     private Controls _controls;
 
 
-    public Vector2 Move => _controls.Player.Move
-        .ReadValue<Vector2>();
+    public Vector2 Move => _controls.Player.Move.ReadValue<Vector2>();
 
 
     public event Action onJump;
+    public event Action onAttack;
 
 
     private void Awake()
     {
         _controls = new Controls();
         _controls.Player.Jump.performed += _ => onJump?.Invoke();
+        _controls.Player.Attack.performed += _ => onAttack?.Invoke();
     }
     private void OnEnable()
     {

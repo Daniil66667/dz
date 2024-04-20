@@ -15,15 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": " Attack",
-                    "type": "Button",
-                    "id": "7a8f9cdb-df22-40c9-89a0-ff904fde6bd4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "8a757e72-8160-447f-bb61-ea0b02eabaa4",
@@ -40,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "50d04dc9-e8ea-42e5-975d-8d948085d546",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -51,17 +51,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "54456267-a6d9-4792-9762-a2b1c7821d8c",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": " Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -130,6 +119,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "9e1e5c4f-a701-452d-a25d-a12217bb52e2",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

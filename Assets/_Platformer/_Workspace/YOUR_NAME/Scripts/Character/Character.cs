@@ -7,6 +7,13 @@ namespace YOUR_NAME
     {
         [SerializeField] private Movement movement;
         [SerializeField] private Interactor interactor;
+        [SerializeField] private MeleeWeapon weapon;
+        [Space]
+        [SerializeField] private Health health;
+        [SerializeField] private DamageCapDecorator damageCap;
+
+        private IHealth _health;
+
         private InputManager _inputManager;
         
         public Movement Movement => movement;
@@ -32,6 +39,7 @@ namespace YOUR_NAME
             
             inputManager.onJump += OnJump;
             inputManager.onInteract += OnInteract;
+            inputManager.onAttack += OnAttack;
         }
 
         private void RemovePlayerInput(InputManager inputManager)
@@ -40,6 +48,12 @@ namespace YOUR_NAME
             
             inputManager.onJump -= OnJump;
             inputManager.onInteract -= OnInteract;
+            inputManager.onAttack -= OnAttack;
+        }
+
+        private void OnAttack()
+        {
+            throw new NotImplementedException();
         }
 
         private void InitInputManager()
@@ -87,6 +101,12 @@ namespace YOUR_NAME
         { 
             movement.DoJump();
         }
+
+        private void onAttack()
+        {
+            weapon.Attack();
+        }
+
 
         private void OnInteract()
         {
